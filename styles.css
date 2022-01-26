@@ -1,0 +1,82 @@
+:root {
+    box-sizing: border-box;
+}
+
+*, *:after, *:before {
+    box-sizing: inherit;
+}
+
+.checked {
+    border: 5px solid greenyellow
+}
+
+header, footer {
+    position: fixed;
+    width: 100%;
+    height: 92px;
+    z-index: 1;
+}
+
+header {
+    background-color: #aa3333;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 18px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 92px 0;
+    background-color: #e5e5e5;
+}
+
+section {
+    margin: 15px 0
+}
+
+section span {
+    margin-left: 19px;
+    font-family: 'Righteous', sans-serif;
+    font-size: 26px;
+    color: #333333;
+}
+
+article {
+    margin-top: 17px;
+    display: flex;
+    overflow: hidden;
+    gap: 16px;
+    padding: 0 19px;
+}
+
+article button {
+    flex-shrink: 0;
+    width: 172px;
+    height: 202px;
+    background-color: #ffffff;
+    border-radius: 9px
+}
+
+footer {
+    bottom: 0;
+    padding: 0 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+footer button {
+    height: 60px;
+    width: 100%;
+    border-radius: 50px
+}
+
+h1 {
+    font-family: 'Righteous', sans-serif;
+    color: #ffffff;
+    font-size: 44px
+}
