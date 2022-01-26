@@ -52,7 +52,12 @@ article {
     padding: 0 19px;
 }
 
+main button {
+    display: none
+}
+
 article button {
+    display: block;
     flex-shrink: 0;
     width: 172px;
     height: 202px;

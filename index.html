@@ -20,10 +20,11 @@
         <span>Sua comida em 6 minutos</span>
     </header>
     <main>
+        <button onclick="select(this)">1</button>
         <section>
             <span>Primeiro, seu prato</span>
             <article>
-                <button onclick="select(this)">1</button>
+                
             </article>
         </section>
         <section>
@@ -37,17 +38,50 @@
             </article>
         </section>
     </main>
-    <footer><button>oi</button></footer>
+
+
+    <footer>
+        <button id="submit">
+            oi
+        </button>
+    </footer>
+
+
     <script>
+        let selected = [null, null, null]
+        let submit = document.getElementById('submit')
+        submit.disabled = true
+
+        let number = '5517997652657'
+        let text = ''
+        submit.addEventListener('click', () => location.href = `
+            https://wa.me/${number}?text=${text}
+        `)
+
         let select = (button) => {
-            button.classList.add("checked")
+            let n = button.id[button.id.length - 1]
+            if(selected[n] != null)
+                selected[n].classList.toggle("checked")
+                
+            button.classList.toggle("checked")
+            selected[n] = button
+
+            text = ''
+            for(var i = 0; i < selected.length; i++){
+                if(selected[i] == null)
+                    return 0
+                text += selected[i].value
+            }
+            submit.disabled = false
         } 
 
         let articles = document.getElementsByTagName("article")
         for(var i = 0; i < articles.length; i++){
             for(var j = 0; j < 3; j++){
-                let button = document.querySelector('button')
-                articles[i].appendChild(button.cloneNode())
+                let button = document.querySelector('button').cloneNode()
+                button.setAttribute("id", `group${i}`)
+                button.setAttribute("value", `-${i}-${j}-`);
+                articles[i].appendChild(button)
             }
         }
     </script>
