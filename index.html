@@ -23,28 +23,33 @@
         <section>
             <span>Primeiro, seu prato</span>
             <article>
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
+                <button onclick="select(this)">1</button>
             </article>
         </section>
         <section>
             <span>Primeiro, seu prato</span>
             <article>
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
             </article>
         </section>
         <section>
             <span>Primeiro, seu prato</span>
             <article>
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
             </article>
         </section>
     </main>
     <footer><button>oi</button></footer>
+    <script>
+        let select = (button) => {
+            button.classList.add("checked")
+        } 
+
+        let articles = document.getElementsByTagName("article")
+        for(var i = 0; i < articles.length; i++){
+            for(var j = 0; j < 3; j++){
+                let button = document.querySelector('button')
+                articles[i].appendChild(button.cloneNode())
+            }
+        }
+    </script>
 </body>
 </html>
