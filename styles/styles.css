@@ -56,10 +56,17 @@ article button {
     position: relative;
 }
 
+article button div {
+    display: flex;
+    justify-content: space-between;
+}
+
+article button img {
+    height: 87px;
+    width: 100%
+}
+
 ion-icon {
-    position: absolute;
-    bottom: 0;
-    right: 0;
     color: transparent;
     font-size: 19px
 }
