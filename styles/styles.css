@@ -52,12 +52,25 @@ article button {
     width: 172px;
     height: 202px;
     background-color: #ffffff;
-    border-radius: 9px
+    border-radius: 9px;
+    position: relative;
+}
+
+ion-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: transparent;
+    font-size: 19px
 }
 
 .selected {
     border: 5px solid var(--selected)
 }
+.selected ion-icon {
+    color: var(--selected);
+}
+
 
 footer {
     bottom: 0;

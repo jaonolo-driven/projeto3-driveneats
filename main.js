@@ -16,9 +16,13 @@ submitButton.addEventListener('click', () => {
 let selectButton = (button) => {
     let n = button.id[button.id.length - 1]
     if(selectedButtons[n] != null)
+    {
         selectedButtons[n].classList.toggle('selected')
-        
+        selectedButtons[n].querySelector('ion-icon').classList.toggle('hidden')
+    }
+
     button.classList.toggle('selected')
+    button.querySelector('ion-icon').classList.toggle('hidden')
     selectedButtons[n] = button
 
     text = 'Olá, gostaria de fazer o pedido:\n'
@@ -34,7 +38,7 @@ let selectButton = (button) => {
 let articles = document.querySelectorAll('article')
 for(let i = 0; i < articles.length; i++){
     for(let j = 0; j < 3; j++){
-        let button = document.querySelector('button').cloneNode()
+        let button = document.querySelector('button').cloneNode(true)
         button.setAttribute('id', `group${i}`)
         button.setAttribute('value', `-${i}-${j}-`);
         articles[i].appendChild(button)
