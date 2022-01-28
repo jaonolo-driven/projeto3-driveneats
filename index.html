@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- Configuração básica -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Importando as fontes Roboto e Righteous -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> 
 
+    <!-- Importando as folhas de estilo -->
     <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/globals.css">
+    <link rel="stylesheet" href="styles/styles.css">
 
+    <!-- Configurações da aba -->
     <title>Document</title>
 </head>
 <body>
+
+    <!-- Cabeçalho da página -->
     <header>
         <h1>DrivenEats</h1>
         <span>Sua comida em 6 minutos</span>
     </header>
+
+    <!-- Conteúdo da página -->
     <main>
-        <button onclick="select(this)">1</button>
+        <!-- Template do botão (invisível) -->
+        <button onclick="selectButton(this)"></button>
+
         <section>
             <span>Primeiro, seu prato</span>
             <article>
-                
             </article>
+
         </section>
         <section>
             <span>Primeiro, seu prato</span>
@@ -37,53 +48,16 @@
             <article>
             </article>
         </section>
+    
     </main>
 
-
+    <!-- Rodapé da página -->
     <footer>
         <button id="submit">
-            oi
         </button>
     </footer>
 
-
-    <script>
-        let selected = [null, null, null]
-        let submit = document.getElementById('submit')
-        submit.disabled = true
-
-        let number = '5517997652657'
-        let text = ''
-        submit.addEventListener('click', () => location.href = `
-            https://wa.me/${number}?text=${text}
-        `)
-
-        let select = (button) => {
-            let n = button.id[button.id.length - 1]
-            if(selected[n] != null)
-                selected[n].classList.toggle("checked")
-                
-            button.classList.toggle("checked")
-            selected[n] = button
-
-            text = ''
-            for(var i = 0; i < selected.length; i++){
-                if(selected[i] == null)
-                    return 0
-                text += selected[i].value
-            }
-            submit.disabled = false
-        } 
-
-        let articles = document.getElementsByTagName("article")
-        for(var i = 0; i < articles.length; i++){
-            for(var j = 0; j < 3; j++){
-                let button = document.querySelector('button').cloneNode()
-                button.setAttribute("id", `group${i}`)
-                button.setAttribute("value", `-${i}-${j}-`);
-                articles[i].appendChild(button)
-            }
-        }
-    </script>
+    <!-- Chamando o script -->
+    <script src="main.js"></script>
 </body>
 </html>
