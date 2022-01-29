@@ -6,8 +6,13 @@ let contentSource = [
     [], // Bebidas
     [] // Sobremesas
 ]
+let sectionNames = [
+    'Primeiro, seu prato',
+    'Depois, a bebida',
+    'Por ultimo, a sobremesa'
+]
 
-let submitButton = document.querySelector('#submit')
+let submitButton = document.querySelector('footer button')
 submitButton.disabled = true
 submitButton.innerHTML =  "Selecione os 3 itens para fechar o pedido"
 
@@ -20,19 +25,23 @@ submitButton.addEventListener('click', () => {
 })
 
 // Colocando os botões para as opções de comida disponíveis
-let articles = document.querySelectorAll('article')
-let button = document.querySelector('button').cloneNode(true)
-for(let i = 0; i < articles.length; i++){
+let main = document.querySelector('main')
+let section = main.querySelector('section')
+let button = section.querySelector('button')
+for(let i = 0; i < contentSource.length; i++){
     button.setAttribute('id', `group${i}`)
     for(let j = 0; j < contentSource[i].length; j++){
         button.setAttribute('value', `${contentSource[i][j]}`)
         button.querySelector('img').src = `public/${contentSource[i][j]}.jpg`
-        articles[i].appendChild(button)
+        section.querySelector('article').appendChild(button)
         button = button.cloneNode(true)
     }
+    section.querySelector('.titulo').innerHTML = sectionNames[i]
+    main.appendChild(section)
+    section = section.cloneNode(true)
 }
 
-let selectedButtons = Array(articles.length).fill(null) // Variável que armazena os botões selecionados de cada categoria
+let selectedButtons = Array(contentSource.length).fill(null) // Variável que armazena os botões selecionados de cada categoria
 
 let toggleSubmitButton = () => {
     for(let i = 0; i < selectedButtons.length; i++){
