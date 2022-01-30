@@ -1,4 +1,4 @@
-let contentSource = [
+const contentSource = [
     {
         title: 'Primeiro, seu prato',
         values: [
