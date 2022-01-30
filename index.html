@@ -1,43 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <!-- Configuração básica -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Importando as fontes Roboto e Righteous -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> 
 
-    <!-- Importando as folhas de estilo -->
     <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
     <link rel="stylesheet" href="styles/globals.css">
     <link rel="stylesheet" href="styles/styles.css">
 
-    <!-- Configurações da aba -->
     <title>Document</title>
 </head>
 <body>
-
-    <!-- Cabeçalho da página -->
     <header>
         <h1>DrivenEats</h1>
         <span>Sua comida em 6 minutos</span>
     </header>
 
-    <!-- Conteúdo da página -->
     <main>
         <section>
-            <span class='titulo'>Primeiro, seu prato</span>
+            <span>Primeiro, seu prato</span>
             <article>
                 <button onclick="selectButton(this)">
                     <img src="" alt="">
-                    <span></span>
-                    <span></span>
+                    <span class="title"></span>
+                    <br>
+                    <span class="description"></span>
                     <div>
-                        <span></span>
+                        <span class="price"></span>
                         <ion-icon name="checkmark-circle"/>
                     </div>
                 </button>
@@ -45,17 +39,21 @@
         </section>
     </main>
 
-    <!-- Rodapé da página -->
     <footer>
         <button>
         </button>
     </footer>
 
-    <!-- Importando os ion-icons -->
+    <div class="popup hidden">
+        <div>
+            <button onclick="confirmOrder()"></button>
+        </div>
+    </div>
+
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <!-- Chamando o script -->
+    <script src="contentSource.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

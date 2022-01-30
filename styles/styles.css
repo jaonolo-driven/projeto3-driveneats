@@ -26,7 +26,7 @@ section {
     margin: 15px 0
 }
 
-section span {
+section > span {
     margin-left: 19px;
     font-family: 'Righteous', sans-serif;
     font-size: 26px;
@@ -63,7 +63,7 @@ article button div {
 
 article button img {
     height: 87px;
-    width: 100%
+    width: 144px
 }
 
 ion-icon {
@@ -77,7 +77,6 @@ ion-icon {
 .selected ion-icon {
     color: var(--selected);
 }
-
 
 footer {
     bottom: 0;
@@ -105,4 +104,28 @@ footer button:enabled {
 h1 {
     font-family: 'Righteous', sans-serif;
     font-size: 44px
+}
+
+.popup {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: #ffffff44;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup > div {
+    width: calc(100vw - 32px);
+    height: 353px;
+    max-width: 377px;
+    background-color: var(--selected);
+}
+
+.hidden {
+    display: none
 }
