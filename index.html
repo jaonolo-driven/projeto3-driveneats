@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> 
 
-    <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+    <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/globals.css">
     <link rel="stylesheet" href="styles/styles.css">
 
@@ -28,8 +28,9 @@
                 <button onclick="selectButton(this)">
                     <img src="" alt="">
                     <span class="title"></span>
-                    <br>
-                    <span class="description"></span>
+                    <div class="description-holder">
+                        <span class="description"></span>
+                    </div>
                     <div>
                         <span class="price"></span>
                         <ion-icon name="checkmark-circle"/>
@@ -48,13 +49,13 @@
         <div>
             <span>Confirme seu pedido</span>
             <div class="popup-content">
-                <div>
+                <div class="popup-small">
                     <span></span>
                     <span></span>
                 </div>
             </div>
-            <button onclick="confirmOrder()">Tudo certo, Pode pedir!</button>
-            <div onclick="togglePopup()">Cancelar</div>
+            <button onclick="confirmOrder()">Tudo certo, pode pedir!</button>
+            <span class="popup-cancelar" onclick="togglePopup()">Cancelar</span>
         </div>
     </div>
 

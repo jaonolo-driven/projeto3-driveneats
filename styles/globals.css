@@ -1,6 +1,6 @@
 :root {
     box-sizing: border-box;
-    --selected: #32B72F
+    --selected: #32B72F;
 }
 
 *, *:after, *:before {
