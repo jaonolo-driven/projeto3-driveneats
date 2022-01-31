@@ -1,6 +1,9 @@
 :root {
     box-sizing: border-box;
+    
+    --accent: #CF2B2B;
     --selected: #32B72F;
+    --popup: #50D074;
 }
 
 *, *:after, *:before {
@@ -11,21 +14,8 @@ body {
     font-family: 'Roboto', sans-serif
 }
 
-/* ==== */
-
-.styled-scrollbars {
-    --scrollbar-foreground: inherit;
-    --scrollbar-background: #44444400;
-    /* Foreground, Background */
-    scrollbar-color: var(--scrollbar-foreground) var(--scrollbar-background);
-}
-.styled-scrollbars::-webkit-scrollbar {
-    width: 10px; /* Mostly for vertical scrollbars */
-    height: 10px; /* Mostly for horizontal scrollbars */
-}
-.styled-scrollbars::-webkit-scrollbar-thumb { /* Foreground */
-    background: var(--scrollbar-foreground);
-}
-.styled-scrollbars::-webkit-scrollbar-track { /* Background */
-    background: var(--scrollbar-background);
+span {
+    word-wrap: break-word;      /* IE 5.5-7 */
+    white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */
+    white-space: pre-wrap;      /* current browsers */
 }

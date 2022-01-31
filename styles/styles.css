@@ -7,19 +7,13 @@ header, footer {
 }
 
 header {
-    background-color: #CF2B2B;
+    background-color: var(--accent);
     top: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 0 18px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-span {
-    word-wrap: break-word;      /* IE 5.5-7 */
-    white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */
-    white-space: pre-wrap;      /* current browsers */
 }
 
 main {
@@ -135,7 +129,7 @@ h1 {
     width: calc(100vw - 32px);
     padding-top: 21px;
     max-width: 377px;
-    background-color: #50D074;
+    background-color: var(--popup);
     border-radius: 9px;
     display: flex;
     align-items: center;
@@ -161,7 +155,7 @@ h1 {
     width: 329px;
     height: 52px;
     border-radius: 100px;
-    color: #50D074
+    color: var(--popup)
 }
 
 .popup-cancelar {
