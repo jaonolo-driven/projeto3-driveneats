@@ -24,16 +24,16 @@
 
     <main>
         <section>
-            <span>Primeiro, seu prato</span>
+            <span></span>
             <article>
-                <button onclick="selectButton(this)">
-                    <img src="" alt="">
-                    <span class="title"></span>
-                    <div class="description-holder">
-                        <span class="description"></span>
+                <button data-identifier="food-option" onclick="selectButton(this)">
+                    <img>
+                    <span data-identifier="food-title"></span>
+                    <div class="description">
+                        <span></span>
                     </div>
                     <div>
-                        <span class="price"></span>
+                        <span data-identifier="food-price" class="price"></span>
                         <ion-icon name="checkmark-circle"/>
                     </div>
                 </button>

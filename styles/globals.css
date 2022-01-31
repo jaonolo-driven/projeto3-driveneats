@@ -4,6 +4,8 @@
     --accent: #CF2B2B;
     --selected: #32B72F;
     --popup: #50D074;
+
+    --accent-font: 'Righteous', sans-serif
 }
 
 *, *:after, *:before {

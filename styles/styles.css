@@ -16,6 +16,11 @@ header {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+h1 {
+    font-family: var(--accent-font);
+    font-size: 44px
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -29,7 +34,7 @@ section {
 
 section > span {
     margin-left: 19px;
-    font-family: 'Righteous', sans-serif;
+    font-family: var(--accent-font);
     font-size: 26px;
     color: #333333;
 }
@@ -68,6 +73,34 @@ article button img {
     border-radius: 4px;
 }
 
+button > span {
+    font-size: 16px;
+    line-height: 18.75px;
+    color: #333333;
+    font-weight: 700;
+}
+
+.description > span {
+    font-size: 15px;
+    line-height: 17.58px;
+    color: #a6a6a6;
+    font-weight: 300;
+    display: inline-block;
+    width: 100%;
+}
+
+.description {
+    height: 48px;
+    display: flex;
+    align-items: center;
+}
+
+.price {
+    font-size: 16px;
+    line-height: 18.75px;
+    font-weight: 400;
+}
+
 ion-icon {
     color: transparent;
     font-size: 19px
@@ -101,11 +134,6 @@ footer button {
 footer button:enabled {
     background-color: var(--selected);
     font-weight: bold;
-}
-
-h1 {
-    font-family: 'Righteous', sans-serif;
-    font-size: 44px
 }
 
 .popup {
@@ -151,6 +179,10 @@ h1 {
     justify-content: space-between;
 }
 
+.popup-small {
+    font-weight: 400
+}
+
 .popup button {
     width: 329px;
     height: 52px;
@@ -163,38 +195,10 @@ h1 {
     font-size: 20px
 }
 
-.popup-small {
-    font-weight: 400
-}
-
 .hidden {
     display: none
 }
 
-.title {
-    font-size: 16px;
-    line-height: 18.75px;
-    color: #333333;
-    font-weight: 700;
-}
-
-.description {
-    font-size: 15px;
-    line-height: 17.58px;
-    color: #a6a6a6;
-    font-weight: 300;
-    display: inline-block;
-    width: 100%;
-}
-
-.description-holder {
-    height: 48px;
-    display: flex;
-    align-items: center;
-}
-
-.price {
-    font-size: 16px;
-    line-height: 18.75px;
-    font-weight: 400;
+button:hover, popup-cancelar:hover {
+    cursor: pointer;
 }
