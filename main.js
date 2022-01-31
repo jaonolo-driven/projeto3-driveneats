@@ -19,16 +19,17 @@ submitButton.addEventListener('click', () => {
     for(let i = 0; i < selectedButtons.length; i++){
         let foodName = selectedButtons[i].querySelector('.title').innerText
         contentHolder.firstElementChild.innerText = foodName
-        text += `- ${contentSource[i].title}: ${foodName}\n`
-        contentHolder.lastElementChild.innerText = selectedButtons[i].value
+        text += `- ${contentSource[i].name}: ${foodName}\n`
+        contentHolder.lastElementChild.innerText = parseFloat(selectedButtons[i].value).toFixed(2)
         totalPrice += parseFloat(selectedButtons[i].value)
-        console.log(contentHolder)
 
         popupContent.appendChild(contentHolder)
         contentHolder = contentHolder.cloneNode(true)
     }
+    totalPrice = totalPrice.toFixed(2)
     contentHolder.firstElementChild.innerText = 'TOTAL'
-    contentHolder.lastElementChild.innerText = totalPrice
+    contentHolder.lastElementChild.innerText = `R$ ${totalPrice}`
+    text += `Total: R$ ${totalPrice}\n`
     contentHolder.classList.remove('popup-small')
     popupContent.appendChild(contentHolder)
 
@@ -66,6 +67,7 @@ const confirmOrder = () => {
     alert("Por favor, insira mais algumas informações a seguir")
     let userName = prompt("Seu nome:")
     let userAdress = prompt("Seu endereço:")
+    text += `\nNome: ${userName}\nEndereço: ${userAdress}`
     window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`)
 }
 
